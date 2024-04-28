@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+ vue-app:
+    build: ./path/to/vue-app
+    ports:
+      - "8080:80"
+    depends_on:
+      - go-app
+
+ go-app:
+    build: ./path/to/go-app
+    ports:
+      - "9090:9090"
