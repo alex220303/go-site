@@ -40,9 +40,9 @@ jobs:
 
 
 
-    - name: Build Go project
+    # - name: Build Go project
 
-      run: go build ./server/
+    #   run: go build ./server/
 
 
 
