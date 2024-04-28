@@ -42,7 +42,7 @@ jobs:
 
     - name: Build Go project
 
-      run: go build
+      run: go build ./server/
 
 
 
