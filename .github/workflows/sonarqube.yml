@@ -54,5 +54,5 @@ jobs:
 
         projectBaseDir: ./  # Set this to the project's base directory
         args: >
-          -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
+          -Dsonar.host.url=http://localhost:9000
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
