@@ -12,7 +12,7 @@
      };
   },
   mounted() {
-     fetch('http://localhost:9090/ping')
+     fetch('http://go-serv/ping')
        .then(response => response.text())
        .then(data => {
          this.message = data;
