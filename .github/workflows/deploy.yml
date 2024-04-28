@@ -1,0 +1,27 @@
+name: Deploy to Netlify
+
+on:
+ push:
+    branches:
+      - main # Или любая другая ветка, которую вы используете
+
+jobs:
+ deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies and build
+      run: |
+        cd client # Путь к вашему клиентскому проекту
+        yarn install
+        yarn build
+
+    - name: Deploy to Netlify
+      uses: netlify/actions/cli@master
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      with:
+        args: deploy --prod
