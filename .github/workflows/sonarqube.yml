@@ -52,6 +52,6 @@ jobs:
 
       with:
 
-        projectBaseDir: ./server/  # Set this to the project's base directory
+        projectBaseDir: ./  # Set this to the project's base directory
 
         sonarToken: ${{ secrets.SONAR_TOKEN }}
