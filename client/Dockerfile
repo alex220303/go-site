@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:20-alpine3.19
 
 WORKDIR /app
 
@@ -12,4 +12,4 @@ RUN yarn build
 
 RUN yarn global add serve
 
-CMD ["serve", "-s", "dist", "-l", "80"]
+CMD ["yarn", "serve"]

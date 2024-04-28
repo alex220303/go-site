@@ -10,7 +10,7 @@ func main() {
 
     // Настройка CORS
     config := cors.DefaultConfig()
-    config.AllowOrigins = []string{"127.0.0.1"} // Разрешаем запросы с любого источника
+    config.AllowOrigins = []string{"*"} // Разрешаем запросы с любого источника
     config.AllowMethods = []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}
     config.AllowHeaders = []string{"*"}
     config.AllowCredentials = true
