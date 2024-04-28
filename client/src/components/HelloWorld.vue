@@ -12,7 +12,7 @@
      };
   },
   mounted() {
-     fetch('http://go-serv.netlify.app/ping')
+     fetch('https://go-serv.netlify.app/ping')
        .then(response => response.text())
        .then(data => {
          this.message = data;
