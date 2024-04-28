@@ -53,7 +53,7 @@ jobs:
       with:
 
         projectBaseDir: ./  # Set this to the project's base directory
-        
-        SONAR_HOST_URL: 'http://your-sonarqube-server:9000'
 
-        sonarToken: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
