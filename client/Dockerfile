@@ -2,14 +2,10 @@ FROM node:20-alpine3.19
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
-
-RUN yarn install
-
 COPY . .
 
-RUN yarn build
+RUN yarn
 
-RUN yarn global add serve
+RUN yarn build
 
 CMD ["yarn", "serve"]
